@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>My Thinking Cap</title>
+<link href="style.css"rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="src/iscroll.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+
+</script>
+
+<script type="application/javascript">
+$(function(){
+  
+//alert(readCookie('uid'));
+    
+  var flickerAPI = "http://50.56.237.229/scroll/examples/simple/categoryphp.php?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+  .done(function( data ) {
+  
+  //alert(data.items.length);
+    $.each( data.items, function( i, item ) {
+    // alert(item.description);
+	 //alert(i);
+	$('#res').append(item.description);
+    });
+  });
+});
+//$('.cat_id').click(function(){
+//  var id=this.attr('id');
+//  alert(id);
+//  
+//  });  
+</script>
+
+<script>
+function set_cookie(key)
+{
+//alert(key);
+//createCookie('cat_id', key, 7);
+if(typeof(Storage)!=="undefined")
+  {
+	localStorage.cat_id=key;
+}
+else
+		{
+		alert("Sorry, your browser does not support web storage...");
+		
+		}
+
+//alert(localStorage.cat_id);
+window.location.href='all.htm';
+}
+</script>
+<link rel="stylesheet" href="iscroll.css" type="text/css" media="screen" />
+
+	
+</head>
+
+
+<body>
+
+<div id="header">
+<a href="enter.htm">My Thinking Cap<br/>
+<span style="font-size:13px; margin-left:8%; font-weight:normal; color:#8A0000;">Prepare to Expand your mind</span></a>
+</div>
+
+<div id="wrapper">
+	<div id="scroller">
+			<div id="container" style="padding-top:20px;">
+						
+						<div style="width:80%; height:30px; padding-top:10px;  background:url(images/repeat1.png) repeat-x; margin:auto; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:15px; text-align:center; font-weight:bold;">
+									Select A Category
+						</div>
+					<div class="content">
+					<div style="background:url(images/tcrepeat1.png) repeat; width:98%; padding:1%; float:left; margin-top:2%;  height:auto; padding-bottom:2%; border-radius:3px; -moz-border-radius:3px; font-family:Arial, Helvetica, sans-serif;  color:#8AE4EE; ">	
+		<div class="menu" style="margin-top:20px;">
+		 
+		<span id="res"> </span>
+			
+			<!--<a href="all.htm"> &nbsp; &nbsp;</a>
+			
+			<a href="all.htm">Any Category</a>-->
+		</div>
+			<div style="width:100%;height:700px; float:left;">
+			</div>
+			</div>
+			</div>
+		
+		</div>
+		</div>
+
+			</div>
+		
+		
+		<div id="footer">
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<A href="promote.htm"><img src="images/submit.png" border="0" /></A>
+
+												
+
+												<A href="promote.htm">Submit</A>
+
+									</div>
+
+						</div>
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<a href="business.htm"><img src="images/businees.png" border="0" /></a>
+
+												
+
+												<a href="business.htm">Business</a>
+
+									</div>
+
+						</div>
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<A href="about.htm"><img src="images/about.png" border="0" /></A>
+
+												
+
+												<A href="about.htm">About</A>
+
+									</div>
+
+						</div>
+
+						<div class="button" style="width:21%; display:none;">
+
+									<div class="bottomtext">
+
+												
+
+												
+												<span style="font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:18px; color:#FFFFFF;"></span>
+												<a href="#">Total Lds</a>
+												
+
+									</div>
+
+						</div>
+
+			</div>
+
+
+
+<!-- jQuery Plugin -->
+
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$("#status").fadeOut(); // will first fade out the loading animation
+			$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+		})
+	//]]>
+</script> 
+</body>
+</html>

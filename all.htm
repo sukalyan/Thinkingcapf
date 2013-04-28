@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>My Thinking Cap</title>
+<link href="style.css"rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="src/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+</script>
+<link rel="stylesheet" href="iscroll.css" type="text/css" media="screen" />
+ 
+
+<style>
+
+
+	.button2 {
+	 padding:5%;
+	 height: 50px;
+	 width:100%;
+	 color: white;
+	 text-decoration: none;
+	 font-size: 14px;
+	 font-family: helvetica, arial;
+
+	 display: block;
+	 text-align: center;
+	 position: relative;
+
+	 /* BACKGROUND GRADIENTS */
+	
+	 background:url(images/buttonbg.jpg) repeat-x;
+
+	 /* BORDER RADIUS */
+	
+
+	 border: 1px solid #368DBE;
+	 border-top: 1px solid #c3d6df;
+
+
+	 /* TEXT SHADOW */
+
+	 text-shadow: 1px 1px 1px black;
+
+	 /* BOX SHADOW */
+	 -moz-box-shadow: 0 1px 3px black;
+	 -webkit-box-shadow: 0 1px 3px black;
+	 box-shadow: 0 1px 3px black;
+	 cursor:pointer;
+	}
+	
+	/* WHILE HOVERED */
+	
+	
+	/* WHILE BEING CLICKED */
+	
+	.button2:hover {
+		 background:url(images/buttonbg1.jpg) repeat-x;
+	}
+	
+	
+	
+</style>
+
+
+</head>
+
+
+<body>
+
+<div id="header">
+<a href="enter.htm">My Thinking Cap<br/>
+<span style="font-size:13px; margin-left:8%; font-weight:normal; color:#8A0000;">Prepare to Expand your mind</span></a>
+</div>
+<div id="wrapper">
+	<div id="scroller">
+<div id="container" style="padding-top:20px; min-height:500px;">
+						
+						<div style="width:70%; height:30px; padding-top:10px; background:url(images/repeat1.png) repeat-x; margin:auto; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:15px; text-align:center; font-weight:bold; ">
+									What will you discover today?
+						</div>
+
+						<div id="content" style="margin-bottom:50px; font-size:20px; font-family:'Times New Roman', Times, serif; ">
+<div style=" width:98%; padding:1%; float:left; margin-top:2%;  height:auto; padding-bottom:2%; border-radius:3px; -moz-border-radius:3px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#8AE4EE; ">
+
+<table style="width:40%;" align="center">
+<tr>
+
+
+<td><a href="mythinking.htm"><button name="btn" class="button2"> Lucky Dip </button></a></td>
+<!--<td><a href="task.htm"><button name="btn1" class="button2">Test</button></a></td>-->
+</tr>
+
+
+</table>
+<!--There Are No Lucky Dibs In This Category..
+<a href="enter.htm"><input type="button" name="btn3" value="exit"></a>-->
+
+</div>
+</div>
+</div>
+	</div>
+			</div>
+			<div id="footer">
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<A href="promote.htm"><img src="images/submit.png" border="0" /></A>
+
+												
+
+												<A href="promote.htm">Submit</A>
+
+									</div>
+
+						</div>
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<a href="business.htm"><img src="images/businees.png" border="0" /></a>
+
+												
+
+												<a href="business.htm">Business</a>
+
+									</div>
+
+						</div>
+
+						<div class="button">
+
+									<div class="bottomtext">
+
+												<A href="about.htm"><img src="images/about.png" border="0" /></A>
+
+												
+
+												<A href="about.htm">About</A>
+
+									</div>
+
+						</div>
+
+						<div class="button" style="width:21%; display:none;">
+
+									<div class="bottomtext">
+
+												
+
+												
+												<span style="font-family:Arial, Helvetica, sans-serif; font-size:14px; margin-top:18px; color:#FFFFFF;"></span>
+												<a href="#">Total Lds</a>
+												
+
+									</div>
+
+						</div>
+
+			</div>
+
+<!-- jQuery Plugin -->
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$("#status").fadeOut(); // will first fade out the loading animation
+			$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+		})
+	//]]>
+</script> 
+</body>
+</html>
+
